@@ -12,7 +12,7 @@
   "deleteURL": {
     "url": "http://localhost:3000/urls/2",
     "method": "DELETE",
-    "responseStatus": 200
+    "responseCode": 200
   },
   "getStatistics": {
     "url": " http://localhost:3000/urls/statistics",

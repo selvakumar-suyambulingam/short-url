@@ -104,7 +104,7 @@ export class UrlService {
   }
 
   /**
-   * Retrieves statistical data for each URL, including the total access count and the
+   * Retrieves statistical data for each active URL, including the total access count and the
    * access count per User-Agent. This method performs two main operations:
    */
   async findUrlStatistics() {

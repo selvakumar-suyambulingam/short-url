@@ -3,6 +3,7 @@ import {
   Controller,
   Delete,
   Get,
+  HttpCode,
   HttpException,
   HttpStatus,
   Ip,
@@ -88,6 +89,7 @@ export class UrlController {
   }
 
   @Delete(':urlId')
+  @HttpCode(200)
   async softDeleteUrl(@Param('urlId') urlId: number) {
     const url = await this.urlService.findOneById(urlId);
     if (!url) {
@@ -95,7 +97,5 @@ export class UrlController {
     }
 
     await this.urlService.deleteShortUrl(urlId);
-
-    return { url };
   }
 }

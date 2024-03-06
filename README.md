@@ -30,8 +30,9 @@ The Short URL Service is a lightweight, high-performance solution for creating a
 
 - **URL Shortening**: Convert long URLs into manageable short links that are easier to share.
 - **Redirection**: Quick and efficient redirection from short URLs to the original URLs.
-- **Concurrency Handling**: Designed to handle thousands of requests per second while ensuring data integrity and prompt responses.
 - **Custom Alias**: Allows the creation of short URLs with custom aliases.
+- **Data Integrity**: Required indexes and unique contraints enforced.
+- **Rate Limiting**: URL requests are rate limited
 - **Analytics**: Tracks access statistics for each short URL, including total hits and hits by User-Agent.
 
 ## Getting Started
@@ -73,6 +74,9 @@ $ npm run start:prod
 ## Running the app with Docker
 
 ```bash
+# update DB host
+Use DATABASE_HOST_DOCKER in app.module.ts to make the local database accessible from docker
+
 # build
 docker build -t short-url-app .
 
@@ -97,10 +101,21 @@ $ npm run test:cov
 
 After starting the application, you can access the Swagger API documentation at http://localhost:3000/api.
 
-## Support
-
-Nest is an MIT-licensed open source project. It can grow thanks to the sponsors and support by the amazing backers. If you'd like to join them, please [read more here](https://docs.nestjs.com/support).
-
-## License
-
-Nest is [MIT licensed](LICENSE).
+## Further Enhancements
+- Code
+  - JSON logging
+  - Efficient URL shortening algorithm to avoid collisions
+  - Custom logging
+  - Custom Exception handlers
+  - Attaching q uuid to every request to uniquly identify the request
+- Monitoring and Alert
+  - Send stats to prometheus and visualize in grafana and setup alerts
+- Advanced Rate Limiting
+  - Rate limiting based on ip
+- Database perfromance
+  - Use a high performance database
+  - DB replicas
+  - Caching using Redis or Memcache
+- Handling High Traffic
+  - Load balancing requests across instances
+  - Auto scaling

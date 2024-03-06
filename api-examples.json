@@ -1,0 +1,59 @@
+{
+  "shortenURL": {
+    "url": "http://localhost:3000/urls/shorten",
+    "method": "POST",
+    "request": {
+      "url": "https://www.google.com/maps"
+    },
+    "response": {
+      "url": "http://localhost:3000/urls/x5no0r"
+    }
+  },
+  "deleteURL": {
+    "url": "http://localhost:3000/urls/2",
+    "method": "DELETE",
+    "responseStatus": 200
+  },
+  "getStatistics": {
+    "url": " http://localhost:3000/urls/statistics",
+    "method": "GET",
+    "response": {
+      "statistics": [
+        {
+          "id": 1,
+          "longUrl": "https://www.google.com/maps",
+          "totalAccessCount": "8",
+          "userAgentCounts": [
+            {
+              "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36",
+              "count": "2"
+            },
+            {
+              "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:123.0) Gecko/20100101 Firefox/123.0",
+              "count": "6"
+            }
+          ]
+        },
+        {
+          "id": 2,
+          "longUrl": "https://mail.yahoo.com/d/folders/1",
+          "totalAccessCount": "10",
+          "userAgentCounts": [
+            {
+              "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36",
+              "count": "2"
+            },
+            {
+              "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:123.0) Gecko/20100101 Firefox/123.0",
+              "count": "3"
+            },
+            {
+              "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36 OPR/108.0.0.0",
+              "count": "5"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

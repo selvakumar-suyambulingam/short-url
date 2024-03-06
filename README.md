@@ -101,8 +101,13 @@ $ npm run test:cov
 
 After starting the application, you can access the Swagger API documentation at http://localhost:3000/api.
 
+## API Example Requests and Responses
+
+The file named api-examples.json in the root directory contains sample requests and responses for the API, serving as a quick reference to understand the API's functionality and structure.
+
 ## Further Enhancements
 - Code
+  - Extensive test cases
   - JSON logging
   - Efficient URL shortening algorithm to avoid collisions
   - Custom logging
